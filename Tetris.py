@@ -16,14 +16,6 @@ large_font = pygame.font.SysFont("comicsans", 75)
 normal_font = pygame.font.SysFont("comicsans", 50)
 smaller_font = pygame.font.SysFont("comicsans", 35)
 
-DORIE = pygame.image.load(r'C:\Users\mile5\Desktop\Coding Projects\Python Prjects\Tetris\assets\Dorie.JPG')
-DORIE1 = pygame.image.load(r'C:\Users\mile5\Desktop\Coding Projects\Python Prjects\Tetris\assets\Dorie1.PNG')
-DORIE2 = pygame.image.load(r'C:\Users\mile5\Desktop\Coding Projects\Python Prjects\Tetris\assets\Dorie2.PNG')
-DORIE3 = pygame.image.load(r'C:\Users\mile5\Desktop\Coding Projects\Python Prjects\Tetris\assets\Dorie3.PNG')
-DORIE4 = pygame.image.load(r'C:\Users\mile5\Desktop\Coding Projects\Python Prjects\Tetris\assets\Dorie4.jpg')
-DORIE5 = pygame.image.load(r'C:\Users\mile5\Desktop\Coding Projects\Python Prjects\Tetris\assets\Dorie5.JPG')
-DORIE6 = pygame.image.load(r'C:\Users\mile5\Desktop\Coding Projects\Python Prjects\Tetris\assets\Dorie6.PNG')
-
 
 pygame.display.set_caption("Tetris")
 WIN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -83,15 +75,11 @@ class Block:
         lighter_color = (150, 150, 150)
         pygame.draw.rect(window, lighter_color, (self.x + 1, self.y + 1, int(BOX_WIDTH) - 2, int(BOX_HEIGHT) - 2))
         pygame.draw.rect(window, self.color, (self.x + 2, self.y + 2, int(BOX_WIDTH) - 4, int(BOX_HEIGHT) - 4))
-        #tiny_dorie = pygame.transform.scale(self.picture, (28, 28))
-        #WIN.blit(tiny_dorie, (self.x+1, self.y+1))
 
     def draw_fake(self, window, x_diff, y_diff):
         lighter_color = (150, 150, 150)
         pygame.draw.rect(window, lighter_color, (self.x + 1 + x_diff, self.y + 1 + y_diff, int(BOX_WIDTH) - 2, int(BOX_HEIGHT) - 2))
         pygame.draw.rect(window, self.color, (self.x + 2 + x_diff, self.y + 2 + y_diff, int(BOX_WIDTH) - 4, int(BOX_HEIGHT) - 4))
-        #tiny_dorie = pygame.transform.scale(self.picture, (28, 28))
-        #WIN.blit(tiny_dorie, (self.x + 2 + x_diff, self.y + 2 + y_diff))
 
 
 # S block, Z block, L block, J block, O block, I block, T block
