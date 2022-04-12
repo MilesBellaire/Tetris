@@ -15,7 +15,7 @@ pygame.font.init()
 large_font = pygame.font.SysFont("comicsans", 75)
 normal_font = pygame.font.SysFont("comicsans", 50)
 smaller_font = pygame.font.SysFont("comicsans", 35)
-
+pic1, pic2, pic3, pic4, pic5, pic6, pic7 = 0, 0, 0, 0, 0, 0, 0
 
 pygame.display.set_caption("Tetris")
 WIN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -259,46 +259,46 @@ class Cluster:
 class SBlock(Cluster):
     def __init__(self, x, y, color):
         super().__init__(x, y, color)
-        self.blocks = [Block(x - BOX_WIDTH, y, color, DORIE),
-                       Block(x, y, color, DORIE),
-                       Block(x, y - BOX_HEIGHT, color, DORIE),
-                       Block(x + BOX_WIDTH, y - BOX_HEIGHT, color, DORIE)]
+        self.blocks = [Block(x - BOX_WIDTH, y, color, pic1),
+                       Block(x, y, color, pic1),
+                       Block(x, y - BOX_HEIGHT, color, pic1),
+                       Block(x + BOX_WIDTH, y - BOX_HEIGHT, color, pic1)]
 
 
 class ZBlock(Cluster):
     def __init__(self, x, y, color):
         super().__init__(x, y, color)
-        self.blocks = [Block(x - BOX_WIDTH, y - BOX_HEIGHT, color, DORIE1),
-                       Block(x, y - BOX_HEIGHT, color, DORIE1),
-                       Block(x, y, color, DORIE1),
-                       Block(x + BOX_WIDTH, y, color, DORIE1)]
+        self.blocks = [Block(x - BOX_WIDTH, y - BOX_HEIGHT, color, pic2),
+                       Block(x, y - BOX_HEIGHT, color, pic2),
+                       Block(x, y, color, pic2),
+                       Block(x + BOX_WIDTH, y, color, pic2)]
 
 
 class LBlock(Cluster):
     def __init__(self, x, y, color):
         super().__init__(x, y, color)
-        self.blocks = [Block(x - BOX_WIDTH, y - BOX_HEIGHT, color, DORIE2),
-                       Block(x - BOX_WIDTH, y, color, DORIE2),
-                       Block(x, y, color, DORIE2),
-                       Block(x + BOX_WIDTH, y, color, DORIE2)]
+        self.blocks = [Block(x - BOX_WIDTH, y - BOX_HEIGHT, color, pic3),
+                       Block(x - BOX_WIDTH, y, color, pic3),
+                       Block(x, y, color, pic3),
+                       Block(x + BOX_WIDTH, y, color, pic3)]
 
 
 class JBlock(Cluster):
     def __init__(self, x, y, color):
         super().__init__(x, y, color)
-        self.blocks = [Block(x - BOX_WIDTH, y, color, DORIE3),
-                       Block(x, y, color, DORIE3),
-                       Block(x + BOX_WIDTH, y, color, DORIE3),
-                       Block(x + BOX_WIDTH, y - BOX_HEIGHT, color, DORIE3)]
+        self.blocks = [Block(x - BOX_WIDTH, y, color, pic4),
+                       Block(x, y, color, pic4),
+                       Block(x + BOX_WIDTH, y, color, pic4),
+                       Block(x + BOX_WIDTH, y - BOX_HEIGHT, color, pic4)]
 
 
 class OBlock(Cluster):
     def __init__(self, x, y, color):
         super().__init__(x, y, color)
-        self.blocks = [Block(x, y, color, DORIE4),
-                       Block(x - BOX_WIDTH, y, color, DORIE4),
-                       Block(x, y - BOX_HEIGHT, color, DORIE4),
-                       Block(x - BOX_WIDTH, y - BOX_HEIGHT, color, DORIE4)]
+        self.blocks = [Block(x, y, color, pic5),
+                       Block(x - BOX_WIDTH, y, color, pic5),
+                       Block(x, y - BOX_HEIGHT, color, pic5),
+                       Block(x - BOX_WIDTH, y - BOX_HEIGHT, color, pic5)]
         self.update_blocks_next_to()
 
     def rotate(self, other_blocks):
@@ -308,19 +308,19 @@ class OBlock(Cluster):
 class IBlock(Cluster):
     def __init__(self, x, y, color):
         super().__init__(x, y, color)
-        self.blocks = [Block(x - BOX_WIDTH*2, y, color, DORIE5),
-                       Block(x - BOX_WIDTH, y, color, DORIE5),
-                       Block(x, y, color, DORIE5),
-                       Block(x + BOX_WIDTH, y, color, DORIE5)]
+        self.blocks = [Block(x - BOX_WIDTH*2, y, color, pic6),
+                       Block(x - BOX_WIDTH, y, color, pic6),
+                       Block(x, y, color, pic6),
+                       Block(x + BOX_WIDTH, y, color, pic6)]
 
 
 class TBlock(Cluster):
     def __init__(self, x, y, color):
         super().__init__(x, y, color)
-        self.blocks = [Block(x, y - BOX_HEIGHT, color, DORIE6),
-                       Block(x - BOX_WIDTH, y, color, DORIE6),
-                       Block(x, y, color, DORIE6),
-                       Block(x + BOX_WIDTH, y, color, DORIE6)]
+        self.blocks = [Block(x, y - BOX_HEIGHT, color, pic7),
+                       Block(x - BOX_WIDTH, y, color, pic7),
+                       Block(x, y, color, pic7),
+                       Block(x + BOX_WIDTH, y, color, pic7)]
         self.update_blocks_next_to()
 
 
